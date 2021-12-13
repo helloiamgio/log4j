@@ -4,7 +4,7 @@ TIMESPTAMP=$(date "+%Y.%m.%d-%H.%M.%S")
 echo "Running CVE-2021-44228 mitigation on $(pwd)"
 echo "Log4j 2 Zero-day mitigation script (CVE-2021-44228)" | tee -a "log4j_mitigation_$TIMESPATMP.log"
 echo "Log4j 2 Zero-day mitigation script (CVE-2021-44228)" | tee -a "log4j_mitigation_$TIMESPTAMP.log"
-JAR_FILES=$(find . -name '*.jar')
+JAR_FILES=$(find / -name '*.jar')
 for JAR_FILE in $JAR_FILES
 do
     echo "[-] Checking: $JAR_FILE" >> "log4j_mitigation_$TIMESPATMP.log"
