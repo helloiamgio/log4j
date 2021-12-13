@@ -10,5 +10,5 @@ do
     CONTAINS_JNDI_LOOKUP=$(unzip -l "$JAR_FILE" | grep "org/apache/logging/log4j/core/lookup/JndiLookup.class")
     if [ ! -z "$CONTAINS_JNDI_LOOKUP" ]; then
         echo "Found org/apache/logging/log4j/core/lookup/JndiLookup in $JAR_FILE" | tee -a "log4j_mitigation_$TIMESPATMP.log"
-        fi
+    fi
 done
