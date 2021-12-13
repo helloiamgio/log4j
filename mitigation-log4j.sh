@@ -1,4 +1,5 @@
 #!/bin/bash
+if [[ `id -u` -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 TIMESPATMP=$(date "+%Y.%m.%d-%H.%M.%S")
 TIMESPTAMP=$(date "+%Y.%m.%d-%H.%M.%S")
 echo "Running CVE-2021-44228 mitigation on $(pwd)"
