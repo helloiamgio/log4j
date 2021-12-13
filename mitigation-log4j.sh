@@ -14,6 +14,7 @@ do
         echo "Found org/apache/logging/log4j/core/lookup/JndiLookup in: $JAR_FILE" >> "log4j_mitigation_$TIMESPATMP.log"
         echo "Removing org/apache/logging/log4j/core/lookup/JndiLookup from $JAR_FILE" | tee -a "log4j_mitigation_$TIMESPATMP.log"
         zip -d "$JAR_FILE" org/apache/logging/log4j/core/lookup/JndiLookup.class  2>&1 >>  "log4j_mitigation_$TIMESPATMP.log"
+    fi    
     if [ -n "$CONTAINS_JNDI_LOOKUP" ]; then
         echo "Found org/apache/logging/log4j/core/lookup/JndiLookup in: $JAR_FILE" >> "log4j_mitigation_$TIMESPTAMP.log"
         echo "Removing org/apache/logging/log4j/core/lookup/JndiLookup from $JAR_FILE" | tee -a "log4j_mitigation_$TIMESPTAMP.log"
